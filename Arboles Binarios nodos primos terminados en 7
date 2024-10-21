@@ -1,0 +1,26 @@
+def funn(arb):
+    return fun_aux(arb,[])
+    
+def fun_aux(arb,arr):
+    if not arb:
+        return arr
+    if esprimo(arb[0]) and not arb[0] % 7:
+        arr = arr + [arb[0]] 
+    return fun_aux(arb[1], arr) or fun_aux(arb[2], arr)
+
+def esprimo(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    return esprimo_aux(n, 3)
+
+def esprimo_aux(n, f):
+    if f * f > n:
+        return True
+    if n % f == 0:
+        return False
+    return esprimo_aux(n, f + 2)
+
