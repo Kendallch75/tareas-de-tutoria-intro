@@ -1,9 +1,9 @@
 def generate_sequence(n, m, a, c, x):
     sequence = []
-    current_value = (x * a + c) % m
+    curr = (x * a + c) % m
     for _ in range(n):
-        sequence.append(current_value)
-        current_value = (current_value * a + c) % m
+        sequence.append(curr)
+        curr = (curr * a + c) % m
     return sequence
 
 def binary_search(array, target):
