@@ -20,5 +20,5 @@ def binary_search(array, target):
   
 n, m, a, c, x = map(int, input().split())
 sequence = generate_sequence(n, m, a, c, x)
-count_found = sum(1 for number in sequence if binary_search_unsorted(sequence, number))
+count_found = sum(1 for number in sequence if binary_search(sequence, number))
 print(count_found)
